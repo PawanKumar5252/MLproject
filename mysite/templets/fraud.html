@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Credit Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6fc;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #357ab8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Customer Credit Analysis Form</h2>
+    <form action="dfraud" method="post" >
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="income">Income</label>
+        <input type="number" id="income" name="income"/>
+      </div>
+
+      <div class="form-group">
+        <label for="customer_age">Customer Age</label>
+        <input type="number" id="customer_age" name="customer_age"/>
+      </div>
+
+      <div class="form-group">
+        <label for="intended_balcon_amount">Intended Balcon Amount</label>
+        <input type="number" id="intended_balcon_amount" name="intended_balcon_amount"/>
+      </div>
+
+      <div class="form-group">
+        <label for="credit_risk_score">Credit Risk Score</label>
+        <input type="number" id="credit_risk_score" name="credit_risk_score"/>
+      </div>
+
+      <div class="form-group">
+        <label for="proposed_credit_limit">Proposed Credit Limit</label>
+        <input type="number" id="proposed_credit_limit" name="proposed_credit_limit"/>
+      </div>
+
+      <div class="form-group">
+        <label for="foreign_request">Foreign Request</label>
+        <!-- <input type="number" id="foreign_request" name="foreign_request" required /> -->
+        <select id="foreign_request" name="foreign_request">
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="session_length_in_minutes">Session Length (minutes)</label>
+        <input type="number" id="session_length_in_minutes" name="session_length_in_minutes"/>
+      </div>
+
+      <button class="submit-btn" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

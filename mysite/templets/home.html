@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Fraud</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            background-image: url('https://nmgprod.s3.amazonaws.com/media/file/f2/5c/eefe1b40a3431d2c5e64385705d1/cover_image__0uLrbVgU__ecommerce_fraud.jpeg.960x540_q85_crop_upscale.jpg'); /* Image path */
+            background-size: cover; /* Cover the entire screen */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent tiling */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #495057;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .banner {
+            background: url('https://via.placeholder.com/1200x300') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000;
+        }
+        /* .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .product p {
+            color: #28a745;
+            font-weight: bold;
+        } */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fraud prediction</h1>
+    </header>
+    
+    <nav>
+        <a href="/#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="/fraud">Detect</a>
+        <a href="/login">Login</a>
+    </nav>
+    <div class="banner">
+    </div>
+    <section class="background">
+        <div class="product">
+            <h2 style="background-color: rgb(172, 165, 165); width: 50%;margin-left: 25%;">{{ msg }}</h2>
+            <!-- <img src=""> -->
+        </div>   
+    </section>
+    <footer style="margin-top: 10%;">
+        &copy; Goverment of India.
+    </footer>
+</body>
+</html>
